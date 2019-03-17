@@ -1,0 +1,7 @@
+{
+    "prettier.semi": false,
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "javascript.implicitProjectConfig.experimentalDecorators": true
+}

@@ -1,0 +1,28 @@
+{
+    "name": "react-wordpress-components",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^16.8.4"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.3.4",
+        "@babel/plugin-proposal-class-properties": "^7.3.4",
+        "@babel/plugin-proposal-decorators": "^7.3.0",
+        "@babel/preset-env": "^7.3.4",
+        "@babel/preset-react": "^7.0.0",
+        "@storybook/addon-actions": "^5.0.1",
+        "@storybook/addon-links": "^5.0.1",
+        "@storybook/addons": "^5.0.1",
+        "@storybook/react": "^5.0.1",
+        "babel-loader": "^8.0.5",
+        "emotion": "^10.0.9"
+    }
+}
