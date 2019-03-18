@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { WordPressContext } from './WordPressProvider'
+import { WordPressContext } from '../WordPressProvider'
 
 const connectWordPress = ComposedComponent => {
     return class extends Component {
