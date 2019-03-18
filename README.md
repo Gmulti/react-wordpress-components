@@ -14,7 +14,7 @@ npm run storybook
 
 ```js
 import React, { Component } from 'react'
-import WordPressProvider, Posts from 'react-wordpress-components'
+import { WordPressProvider, Posts } from 'react-wordpress-components'
 
 class MyPage extends Component {
     render() {
