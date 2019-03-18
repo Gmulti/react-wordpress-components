@@ -1,14 +1,20 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import connectWordPress from './connectWordPress'
 import Posts from '../services/Posts'
 
-const connectPosts = ConnectedComposed => {
+export const connectPosts = ConnectedComposed => {
     @connectWordPress()
-    class connectPosts extends Component {
+    class ConnectorPost extends Component {
         postsApi = null
 
         state = {
             posts: []
+        }
+
+        constructor(props) {
+            super(props)
+
+            this.postsApi = this.getPostsApi()
         }
 
         getPostsApi = () => {
@@ -19,8 +25,7 @@ const connectPosts = ConnectedComposed => {
         }
 
         getPosts = async () => {
-            const posts = await this.getPostsApi().all()
-
+            const posts = await this.postsApi.all()
             this.setState({ posts })
         }
 
@@ -30,7 +35,7 @@ const connectPosts = ConnectedComposed => {
 
         getComposedProps = () => {
             return {
-                postsApi: this.getPostsApi(),
+                postsApi: this.postsApi,
                 posts: this.state.posts
             }
         }
@@ -40,7 +45,7 @@ const connectPosts = ConnectedComposed => {
         }
     }
 
-    return connectPosts
+    return ConnectorPost
 }
 
 export default () => {
