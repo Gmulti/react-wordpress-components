@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts expect to render 1`] = `<ul />`;
+
+exports[`Posts expect to render with props 1`] = `
+<ul>
+  <li>
+    Hello World
+  </li>
+  <li>
+    Foo Bar
+  </li>
+</ul>
+`;

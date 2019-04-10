@@ -5,8 +5,13 @@
     "main": "index.js",
     "scripts": {
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "test": "yarn jest",
+        "test:watch": "yarn jest --watch"
     },
+    "workspaces": [
+        "packages/*"
+    ],
     "author": "",
     "license": "ISC",
     "dependencies": {
@@ -15,15 +20,21 @@
     },
     "devDependencies": {
         "@babel/core": "^7.3.4",
-        "@babel/plugin-proposal-class-properties": "^7.3.4",
+        "@babel/plugin-proposal-class-properties": "^7.4.0",
         "@babel/plugin-proposal-decorators": "^7.3.0",
-        "@babel/preset-env": "^7.3.4",
+        "@babel/preset-env": "^7.4.3",
         "@babel/preset-react": "^7.0.0",
         "@storybook/addon-actions": "^5.0.1",
         "@storybook/addon-links": "^5.0.1",
         "@storybook/addons": "^5.0.1",
         "@storybook/react": "^5.0.1",
         "babel-loader": "^8.0.5",
-        "emotion": "^10.0.9"
+        "emotion": "^10.0.9",
+        "enzyme": "^3.9.0",
+        "enzyme-adapter-react-16": "^1.12.1",
+        "enzyme-to-json": "^3.3.5",
+        "jest": "^24.7.1",
+        "jest-watch-typeahead": "^0.3.0",
+        "react-test-renderer": "^16.8.6"
     }
 }
