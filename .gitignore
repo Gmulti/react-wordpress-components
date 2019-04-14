@@ -5,6 +5,7 @@ build/
 .DS_Store
 .eslintcache
 .idea
+coverage
 
 # Argos CI screenshots
 integration/screenshots/
