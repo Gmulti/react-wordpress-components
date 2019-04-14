@@ -6,6 +6,7 @@ build/
 .eslintcache
 .idea
 coverage
+.out
 
 # Argos CI screenshots
 integration/screenshots/

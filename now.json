@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "name": "react-wp-storybook",
+    "alias": "react-wp-storybook.now.sh",
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/static-build",
+            "config": {
+                "distDir": ".out"
+            }
+        }
+    ]
+}

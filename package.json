@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook",
+        "build-storybook": "build-storybook -c .storybook -o .out",
+        "now-build": "build-storybook -c .storybook -o .out",
         "test": "yarn jest",
         "test:watch": "yarn jest --watch",
         "test:coverage": "npm run test -- --coverage"
