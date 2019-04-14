@@ -1,7 +1,6 @@
 # React WordPress Components
 
 [![Travis](https://img.shields.io/travis/com/Gmulti/react-wordpress-components/master.svg?style=for-the-badge)][travis-url]
-[travis-url]: https://travis-ci.com/Gmulti/react-wordpress-components
 
 > This library manages generic components related to the WordPress API
 
@@ -70,3 +69,5 @@ class MyPage extends Component {
 //     <div>Post Title 3</div>
 // </div>
 ```
+
+[travis-url]: https://travis-ci.com/Gmulti/react-wordpress-components
