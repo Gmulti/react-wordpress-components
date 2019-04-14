@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-
-export const WordPressContext = React.createContext(null)
+import { WordPressContext } from './context/WordPressContext'
 
 class WordPressProvider extends Component {
     render() {
