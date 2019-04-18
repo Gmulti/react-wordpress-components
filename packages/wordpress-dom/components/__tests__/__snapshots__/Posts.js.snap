@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Posts expect to render 1`] = `<ul />`;
+exports[`Posts expect to render 1`] = `ShallowWrapper {}`;
 
 exports[`Posts expect to render with props 1`] = `
 <ul>
