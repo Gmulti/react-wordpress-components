@@ -1,2 +1,5 @@
 // Components
-export { default as Posts } from './components/Posts'
+export { Posts } from './components/Posts'
+
+// Widgets
+export { WidgetPosts } from './widgets/Posts'

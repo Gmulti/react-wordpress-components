@@ -1,3 +1,4 @@
 // Connectors
-export { connectWordPress } from './connectors/connectWordPress'
-export { connectPosts } from './connectors/connectWordPresconnectPosts'
+import connectWordPress from './connectors/connectWordPress'
+
+export { connectWordPress }
