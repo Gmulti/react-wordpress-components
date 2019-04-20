@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories expect to render 1`] = `ShallowWrapper {}`;
+
+exports[`Categories expect to render with props 1`] = `
+<ul>
+  <li>
+    Category 1
+  </li>
+  <li>
+    Category 2
+  </li>
+</ul>
+`;
