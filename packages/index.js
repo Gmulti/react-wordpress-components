@@ -1,10 +1,19 @@
-import connectWordPress from './wordpress-api/connectors/connectWordPress'
 import WordPressProvider from './wordpress-api/WordPressProvider'
-import Posts from './wordpress-dom/widgets/Posts'
 
-export { WordPressProvider, Posts, connectWordPress }
-export default {
+import connectWordPress from './wordpress-api/connectors/connectWordPress'
+import connectPosts from './wordpress-api/connectors/connectPosts'
+import connectCategories from './wordpress-api/connectors/connectCategories'
+
+import WidgetPosts from './wordpress-dom/widgets/Posts'
+import WidgetCategories from './wordpress-dom/widgets/Categories'
+
+export const library = {
     WordPressProvider,
-    Posts,
-    connectWordPress
+    WidgetPosts,
+    WidgetCategories,
+    connectWordPress,
+    connectPosts,
+    connectCategories
 }
+
+export default library
