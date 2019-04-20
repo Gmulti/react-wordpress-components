@@ -4,6 +4,9 @@ import connectCustomPostType from './wordpress-api/connectors/connectCustomPostT
 import { WordPressProviderContext } from './wordpress-api/context/WordPressProviderContext'
 import WordPressProvider from './wordpress-api/WordPressProvider'
 
+import WidgetCategories from './wordpress-dom/widgets/Categories'
+import connectCategories from './wordpress-api/connectors/connectCategories'
+
 import WordPressContext from './wordpress-context/index'
 
 export {
@@ -12,7 +15,9 @@ export {
     connectPosts,
     WordPressContext,
     WordPressProviderContext,
-    connectCustomPostType
+    connectCustomPostType,
+    WidgetCategories,
+    connectCategories
 }
 
 export default {
