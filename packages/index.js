@@ -1,13 +1,21 @@
 import connectWordPress from './wordpress-api/connectors/connectWordPress'
 import connectPosts from './wordpress-api/connectors/connectPosts'
+import { WordPressProviderContext } from './wordpress-api/context/WordPressProviderContext'
 import WordPressProvider from './wordpress-api/WordPressProvider'
-import Posts from './wordpress-dom/widgets/Posts'
+import WordPressContext from './wordpress-context/index'
 
-export { WordPressProvider, Posts, connectWordPress, connectPosts }
+export {
+    WordPressProvider,
+    connectWordPress,
+    connectPosts,
+    WordPressContext,
+    WordPressProviderContext
+}
 
 export default {
+    WordPressProviderContext,
     WordPressProvider,
-    Posts,
     connectWordPress,
-    connectPosts
+    connectPosts,
+    ...WordPressContext
 }

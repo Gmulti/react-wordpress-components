@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { WordPressContext } from '../context/WordPressContext'
+import { WordPressProviderContext } from '../context/WordPressProviderContext'
 
 export const connectWordPress = ComposedComponent => {
     return class extends Component {
         render() {
             return (
-                <WordPressContext.Consumer>
+                <WordPressProviderContext.Consumer>
                     {props => {
                         return <ComposedComponent {...props} />
                     }}
-                </WordPressContext.Consumer>
+                </WordPressProviderContext.Consumer>
             )
         }
     }

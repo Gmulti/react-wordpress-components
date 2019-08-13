@@ -1,3 +1,5 @@
+import queryString from 'query-string'
+
 class Endpoint {
     constructor({ baseUrl, customPath = 'wp-json/wp/v2' }) {
         this.baseUrl = baseUrl
@@ -20,8 +22,7 @@ class Endpoint {
 
     getQueryParams = (query = null) => {
         if (query) {
-            const queryData = new URLSearchParams(query)
-            return `?${queryData.toString()}`
+            return `?${queryString.stringify(query, { arrayFormat: 'index' })}`
         }
         return ''
     }

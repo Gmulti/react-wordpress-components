@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
-import { WordPressContext } from './context/WordPressContext'
+import { WordPressProviderContext } from './context/WordPressProviderContext'
 
 class WordPressProvider extends Component {
     render() {
         return (
-            <WordPressContext.Provider
+            <WordPressProviderContext.Provider
                 value={{
-                    baseUrl: this.props.baseUrl
+                    baseUrl: this.props.baseUrl,
+                    data: this.props.data || null
                 }}
             >
                 {this.props.children}
-            </WordPressContext.Provider>
+            </WordPressProviderContext.Provider>
         )
     }
 }

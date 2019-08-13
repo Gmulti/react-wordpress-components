@@ -1,42 +1,29 @@
 import React, { Component } from 'react'
 import connectWordPress from './connectWordPress'
 import Posts from '../services/Posts'
+import { isNull } from 'lodash'
 
 export const connectPosts = ConnectedComposed => {
     @connectWordPress()
     class ConnectorPost extends Component {
-        postsApi = null
+        servicePostsApi = null
 
-        state = {
-            posts: []
-        }
+        getServicePostsApi = () => {
+            if (!isNull(this.servicePostsApi)) {
+                return this.servicePostsApi
+            }
 
-        constructor(props) {
-            super(props)
-
-            this.postsApi = this.getPostsApi()
-        }
-
-        getPostsApi = () => {
             const { baseUrl } = this.props
-            return new Posts({
+            this.servicePostsApi = new Posts({
                 baseUrl
             })
-        }
 
-        getPosts = async () => {
-            const posts = await this.postsApi.all()
-            this.setState({ posts })
-        }
-
-        componentDidMount() {
-            this.getPosts()
+            return this.servicePostsApi
         }
 
         getComposedProps = () => {
             return {
-                postsApi: this.postsApi,
-                posts: this.state.posts
+                getServicePostsApi: this.getServicePostsApi
             }
         }
 
