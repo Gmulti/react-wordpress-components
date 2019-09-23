@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function Posts({ posts = [] }) {
     return (
@@ -8,6 +9,10 @@ function Posts({ posts = [] }) {
             ))}
         </ul>
     )
+}
+
+Posts.propTypes = {
+    posts: PropTypes.array
 }
 
 export default Posts

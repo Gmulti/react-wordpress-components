@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import connectWordPress from './connectWordPress'
-import Posts from '../services/Posts'
 import { isNull } from 'lodash'
 import CustomPostType from '../services/CustomPostType'
 

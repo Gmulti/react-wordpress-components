@@ -3,6 +3,7 @@ import connectPosts from './wordpress-api/connectors/connectPosts'
 import connectCustomPostType from './wordpress-api/connectors/connectCustomPostType'
 import { WordPressProviderContext } from './wordpress-api/context/WordPressProviderContext'
 import WordPressProvider from './wordpress-api/WordPressProvider'
+
 import WordPressContext from './wordpress-context/index'
 
 export {
