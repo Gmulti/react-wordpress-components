@@ -4,7 +4,7 @@ import {
     withCommentsProvider,
     withComments
 } from '../../wordpress-context/withComments'
-import CommentsComponent from '../components/Comments'
+import CommentsComponent from '../ui/Comments'
 import { isNull } from 'lodash'
 
 const Comments = props => {
@@ -22,7 +22,7 @@ const Comments = props => {
 
         fetchData()
     }, [])
-    console.log(props)
+
     return <CommentsComponent items={comments} {...props} />
 }
 

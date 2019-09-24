@@ -4,7 +4,7 @@ import {
     withCategoriesProvider,
     withCategories
 } from '../../wordpress-context/withCategories'
-import CategoriesComponent from '../components/Categories'
+import CategoriesComponent from '../ui/Categories'
 import { isNull } from 'lodash'
 
 const Categories = props => {
@@ -22,7 +22,7 @@ const Categories = props => {
 
         fetchData()
     }, [])
-    console.log(props)
+
     return <CategoriesComponent items={categories} {...props} />
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Categories({ items = [] }) {
+function Categories({ items }) {
     return (
         <ul>
             {items.map((item, key) => (

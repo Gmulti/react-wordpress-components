@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connectPosts } from '../../wordpress-api/connectors/connectPosts'
 import { withPostsProvider, withPosts } from '../../wordpress-context/withPosts'
-import PostsComponent from '../components/Posts'
+import PostsComponent from '../ui/Posts'
 import { isNull } from 'lodash'
 
 const Posts = props => {
@@ -9,6 +9,7 @@ const Posts = props => {
         postsContext: { dispatch, posts },
         getServicePostsApi
     } = props
+
     useEffect(() => {
         const fetchData = async () => {
             const posts = await getServicePostsApi().all()
