@@ -16,7 +16,7 @@ describe('Posts', () => {
     it('expect to render with props', () => {
         const instance = renderer.create(
             <Posts
-                posts={[
+                items={[
                     {
                         title: {
                             rendered: 'Hello World'
