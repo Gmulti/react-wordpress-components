@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function Categories({ items = [] }) {
     return (
@@ -8,6 +9,10 @@ function Categories({ items = [] }) {
             ))}
         </ul>
     )
+}
+
+Categories.propTypes = {
+    items: PropTypes.array
 }
 
 export default Categories

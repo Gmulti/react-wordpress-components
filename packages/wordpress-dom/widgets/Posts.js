@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { connectPosts } from '../../wordpress-api/connectors/connectPosts'
 import { withPostsProvider, withPosts } from '../../wordpress-context/withPosts'
 import PostsComponent from '../components/Posts'
+import { isNull } from 'lodash'
 
 const Posts = props => {
     const {
@@ -11,7 +12,7 @@ const Posts = props => {
     useEffect(() => {
         const fetchData = async () => {
             const posts = await getServicePostsApi().all()
-            if (!isNull(comments)) {
+            if (!isNull(posts)) {
                 dispatch({ type: 'addMany', payload: posts })
             }
         }

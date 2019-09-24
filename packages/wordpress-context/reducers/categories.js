@@ -1,17 +1,17 @@
-export const initialState = { comments: [], offset: 0 }
+export const initialState = { categories: [], offset: 0 }
 
 export const reducer = (state, { type, payload }) => {
     switch (type) {
         case 'addMany':
             return {
                 ...state,
-                comments: [...state.comments, ...payload],
+                categories: [...state.categories, ...payload],
                 offset: state.offset + payload.length
             }
         case 'add':
             return {
                 ...state,
-                comments: [...state.comments, payload],
+                categories: [...state.categories, payload],
                 offset: state.offset++
             }
     }
