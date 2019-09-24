@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Posts({ posts = [] }) {
+function Posts({ items = [] }) {
     return (
         <ul>
-            {posts.map((post, key) => (
+            {items.map((post, key) => (
                 <li key={key}>{post.title.rendered}</li>
             ))}
         </ul>
@@ -12,7 +12,7 @@ function Posts({ posts = [] }) {
 }
 
 Posts.propTypes = {
-    posts: PropTypes.array
+    items: PropTypes.array
 }
 
 export default Posts

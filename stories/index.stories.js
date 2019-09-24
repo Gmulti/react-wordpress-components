@@ -16,7 +16,7 @@ storiesOf('Post', module).add('widget', () => (
 ))
 
 storiesOf('Comment', module).add('widget', () => (
-    <WordPressProvider baseUrl="https://essential-dev-skills.com">
+    <WordPressProvider baseUrl="https://capitainewp.io">
         <Comments />
     </WordPressProvider>
 ))

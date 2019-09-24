@@ -11,13 +11,15 @@ const Posts = props => {
     useEffect(() => {
         const fetchData = async () => {
             const posts = await getServicePostsApi().all()
-            dispatch({ type: 'addMany', payload: posts })
+            if (!isNull(comments)) {
+                dispatch({ type: 'addMany', payload: posts })
+            }
         }
 
         fetchData()
     }, [])
 
-    return <PostsComponent posts={posts} {...props} />
+    return <PostsComponent items={posts} {...props} />
 }
 
 export default connectPosts(withPostsProvider()(withPosts()(Posts)))

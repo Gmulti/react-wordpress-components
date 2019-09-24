@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import connectWordPress from './connectWordPress'
-import Posts from '../services/Posts'
+import Comments from '../services/Comments'
 import { isNull } from 'lodash'
 
 export const connectComments = ConnectedComposed => {
@@ -23,7 +23,7 @@ export const connectComments = ConnectedComposed => {
 
         getComposedProps = () => {
             return {
-                getserviceCommentsApi: this.getserviceCommentsApi
+                getServiceCommentsApi: this.getServiceCommentsApi
             }
         }
 
